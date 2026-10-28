@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E-commerce Application — Kirolos Emad</title>
+<meta name="description" content="A Flutter shopping app with API-powered product discovery, authentication, search, product details and locally persisted cart data.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="E-commerce Application — Kirolos Emad">
+<meta property="og:description" content="Explore products, search categories, view product details, authenticate with the REST API and manage a locally saved shopping cart.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#ECEBE3">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav" id="site-nav"><nav class="nav-inner" aria-label="Sections"><button class="nav-root" type="button" aria-expanded="false" aria-controls="nav-list" data-home="index.html">Kirolos Emad</button><ul class="nav-list" id="nav-list"><li><a href="index.html#home">Home</a></li><li><a href="index.html#projects" aria-current="page">Projects</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav></header>
+<main id="main">
+<header class="cs-top">
+  <nav class="project-breadcrumb mono" aria-label="Breadcrumb"><a href="index.html#projects">Projects</a> / E-commerce Application · 04 of 05</nav>
+  <h1 class="cs-title">E-commerce Application</h1>
+  <p class="cs-sum">A Flutter shopping application that lets users create an account or sign in, discover products, browse categories, search by title, inspect product details and manage a shopping cart. The app uses REST API data, Cubit/BLoC state management and local storage for cart data and authentication tokens.</p>
+  <div class="cs-actions actions"><a class="btn" href="index.html#projects">Back to all projects</a><a class="btn" href="https://github.com/kero12-eg/e_commerce_app" target="_blank" rel="noopener noreferrer">GitHub repository</a></div>
+  <dl class="facts"><div><dt>Framework</dt><dd>Flutter · Dart</dd></div><div><dt>Data</dt><dd>EscuelaJS Fake Store API</dd></div><div><dt>State</dt><dd>Cubit / BLoC</dd></div><div><dt>Storage</dt><dd>SharedPreferences · Secure Storage</dd></div></dl>
+</header>
+
+<section class="cs-sec" aria-labelledby="h-overview"><h2 id="h-overview">Project overview</h2><div><p>The app presents a product-discovery flow inspired by modern shopping applications. The home screen retrieves products and categories from the EscuelaJS Fake Store API, while category selection and keyword search help users narrow the catalog. Selecting a product opens a dedicated details page showing its image, title, description and price.</p><p>Users can add products to a cart, adjust quantities and remove items. Cart data is serialized and stored locally so it can be restored when the app is reopened. Login and registration use API endpoints, while tokens returned after login are saved securely on the device.</p></div></section>
+
+<section class="cs-sec" aria-labelledby="h-does"><h2 id="h-does">Key features</h2><ul class="caps">
+<li>Register a new account and sign in through the REST API, with input validation on authentication forms.</li>
+<li>Load and browse products from the API, with category filtering and an All category.</li>
+<li>Search the catalog by product title.</li>
+<li>Open a product details screen with product image, title, description and price.</li>
+<li>Add products to the cart, increase or decrease quantities, and remove items.</li>
+<li>Persist cart contents in SharedPreferences so cart items can be restored after reopening the app.</li>
+<li>Store access and refresh tokens with flutter_secure_storage after a successful login.</li>
+<li>Navigate between Home, Cart and Account through the bottom navigation bar.</li>
+<li>Show an account area, sample address-book entries and a logout action.</li>
+<li>Use responsive sizing with Flutter ScreenUtil and reusable UI components.</li>
+</ul></section>
+
+<section class="cs-sec" aria-labelledby="h-stack"><h2 id="h-stack">Technology stack</h2><dl>
+<div class="stack-block"><dt>Framework</dt><dd>Flutter, Dart</dd></div>
+<div class="stack-block"><dt>Networking</dt><dd>Dio, REST API</dd></div>
+<div class="stack-block"><dt>State management</dt><dd>flutter_bloc (Cubit), dartz</dd></div>
+<div class="stack-block"><dt>Dependency injection</dt><dd>get_it</dd></div>
+<div class="stack-block"><dt>Navigation</dt><dd>go_router, go_transitions</dd></div>
+<div class="stack-block"><dt>Local storage</dt><dd>shared_preferences, flutter_secure_storage</dd></div>
+<div class="stack-block"><dt>UI utilities</dt><dd>flutter_screenutil, lottie, shimmer, intl, animated_snack_bar, pretty_dio_logger, flutter_staggered_animations</dd></div>
+</dl></section>
+
+<section class="cs-sec" aria-labelledby="h-api"><h2 id="h-api">API integration</h2><div><p>The application uses the EscuelaJS Fake Store API as its remote data source.</p><p><strong>Base URL:</strong> <code>https://api.escuelajs.co/api/v1/</code></p><ul class="caps"><li><code>GET /products</code> — retrieve the product catalog.</li><li><code>GET /categories</code> — retrieve product categories.</li><li><code>GET /categories/{id}/products</code> — retrieve products for a selected category.</li><li><code>GET /products?title={query}</code> — search by product title.</li><li><code>POST /users</code> — register an account.</li><li><code>POST /auth/login</code> — authenticate a user.</li></ul><p>API requests are handled through Dio and the project repository layer. No API key is configured in the supplied source. API availability and behavior depend on the external service.</p></div></section>
+
+<section class="cs-sec" aria-labelledby="h-storage"><h2 id="h-storage">Local storage and current scope</h2><div><p>The cart repository saves cart items as JSON in <code>SharedPreferences</code>, including product ID, title, price, image URL and quantity. Access and refresh tokens returned after login are stored using <code>flutter_secure_storage</code>. Products and categories are retrieved from the remote API.</p><p><strong>Current limitations:</strong> the checkout button is a UI entry point only; payment and order processing are not connected. The subtotal, VAT, shipping and total shown in the cart are sample values. The addresses shown in the address screen are sample UI entries.</p></div></section>
+
+<section class="cs-sec" aria-labelledby="h-structure"><h2 id="h-structure">Architecture and code organization</h2><div><p>The codebase is separated into a shared <code>Core</code> layer and feature-oriented <code>Features</code> directories. Core contains networking, routing, shared styling, service location and storage helpers. Feature directories organize authentication, product discovery, product details, cart, account, address book and splash functionality.</p><p>Cubits manage authentication, categories, products and cart state. Repository classes keep data operations separate from screen widgets, while shared theme and UI components support consistency across screens.</p></div></section>
+
+<section class="cs-sec gallery-sec" aria-labelledby="h-shots">
+  <div class="gallery-intro"><h2 id="h-shots">Screenshots</h2><p class="lede">Screens captured from the Android emulator. Select any image to enlarge it, or use the arrow keys to navigate through the gallery.</p></div>
+  <div><ul class="gallery">
+    <li><button class="gallery-item" type="button" data-full="assets/projects/e-commerce-application/LoginScreen.jpeg" data-cap="E-commerce App: login screen with username and password fields."><img src="assets/projects/e-commerce-application/LoginScreen.jpeg" alt="E-commerce app login screen" width="449" height="835" loading="lazy"></button></li>
+    <li><button class="gallery-item" type="button" data-full="assets/projects/e-commerce-application/RegisterScreen.jpeg" data-cap="E-commerce App: create-account form with full name, username, password and confirmation fields."><img src="assets/projects/e-commerce-application/RegisterScreen.jpeg" alt="E-commerce app create account screen" width="445" height="827" loading="lazy"></button></li>
+    <li><button class="gallery-item" type="button" data-full="assets/projects/e-commerce-application/HomeScreen.jpeg" data-cap="E-commerce App: discover screen showing product search, category filters and a product grid."><img src="assets/projects/e-commerce-application/HomeScreen.jpeg" alt="E-commerce app discover home screen" width="447" height="831" loading="lazy"></button></li>
+    <li><button class="gallery-item" type="button" data-full="assets/projects/e-commerce-application/ProductDetailsScreen.jpeg" data-cap="E-commerce App: product details with image, rating, description, price and add-to-cart action."><img src="assets/projects/e-commerce-application/ProductDetailsScreen.jpeg" alt="E-commerce app product details screen" width="448" height="828" loading="lazy"></button></li>
+    <li><button class="gallery-item" type="button" data-full="assets/projects/e-commerce-application/CartScreen.jpeg" data-cap="E-commerce App: shopping cart with item quantity controls, a summary and checkout entry point."><img src="assets/projects/e-commerce-application/CartScreen.jpeg" alt="E-commerce app shopping cart screen" width="436" height="827" loading="lazy"></button></li>
+    <li><button class="gallery-item" type="button" data-full="assets/projects/e-commerce-application/AccountScreen.jpeg" data-cap="E-commerce App: account menu with orders, details, address book, FAQs and help center entries."><img src="assets/projects/e-commerce-application/AccountScreen.jpeg" alt="E-commerce app account screen" width="440" height="830" loading="lazy"></button></li>
+    <li><button class="gallery-item" type="button" data-full="assets/projects/e-commerce-application/AddressScreen.jpeg" data-cap="E-commerce App: address book showing sample saved addresses."><img src="assets/projects/e-commerce-application/AddressScreen.jpeg" alt="E-commerce app saved addresses screen" width="454" height="834" loading="lazy"></button></li>
+  </ul></div>
+</section>
+
+<section class="cs-end"><div class="actions"><a class="btn" href="index.html#projects">Back to all projects</a><a class="btn" href="project-news-app.html">Previous project: News App</a><a class="btn btn-primary" href="project-masiter.html">Next project: Masiter</a></div></section>
+</main>
+<dialog id="lightbox" class="lightbox" aria-label="Screenshot viewer">
+  <figure class="lb-fig"><img class="lb-img" src="" alt="" width="454" height="835"><figcaption class="lb-cap"></figcaption></figure>
+  <div class="lb-bar"><button class="btn lb-prev" type="button">Previous</button><span class="mono lb-count" aria-live="polite"></span><button class="btn lb-next" type="button">Next</button><button class="btn lb-close" type="button">Close</button></div>
+</dialog>
+<footer class="foot mono">Kirolos Emad · © <span data-year>2026</span></footer>
+</body>
+</html>

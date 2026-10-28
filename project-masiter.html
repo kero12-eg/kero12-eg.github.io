@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Masiter | مسيطر — Kirolos Emad</title>
+<meta name="description" content="Masiter is a collaborative Flutter business-management application for shops and small businesses, with inventory, invoices, customers and receivables on Android and web.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Masiter | مسيطر — Kirolos Emad">
+<meta property="og:description" content="A collaborative business-management app built with Flutter, Firebase, Cloud Firestore and Supabase Storage, supporting Android and web.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#ECEBE3">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav" id="site-nav"><nav class="nav-inner" aria-label="Sections"><button class="nav-root" type="button" aria-expanded="false" aria-controls="nav-list" data-home="index.html">Kirolos Emad</button><ul class="nav-list" id="nav-list"><li><a href="index.html#home">Home</a></li><li><a href="index.html#projects" aria-current="page">Projects</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav></header>
+<main id="main">
+<header class="cs-top">
+  <nav class="project-breadcrumb mono" aria-label="Breadcrumb"><a href="index.html#projects">Projects</a> / Masiter | مسيطر · 05 of 05</nav>
+  <h1 class="cs-title">Masiter <span lang="ar" dir="rtl">مسيطر</span></h1>
+  <p class="cs-sum">Masiter is a collaborative Flutter application for shops and small businesses. It brings product management, inventory, sales invoices, customer records and outstanding balances into one organized workflow, with Arabic and English interfaces, light and dark themes, and support for Android and web.</p>
+  <div class="cs-actions actions"><a class="btn btn-primary" href="https://masiter.web.app/" target="_blank" rel="noopener noreferrer">Live web app</a><a class="btn" href="https://github.com/rimonnnn/Warshity/releases/download/v1.0.0/app-release.apk" target="_blank" rel="noopener noreferrer">Download Android APK</a><a class="btn" href="https://github.com/rimonnnn/Warshity" target="_blank" rel="noopener noreferrer">GitHub repository</a></div>
+  <dl class="facts"><div><dt>Framework</dt><dd>Flutter · Dart</dd></div><div><dt>Platforms</dt><dd>Android · Web</dd></div><div><dt>Backend</dt><dd>Firebase Authentication · Cloud Firestore</dd></div><div><dt>Storage</dt><dd>Supabase Storage</dd></div><div><dt>Languages</dt><dd>Arabic RTL · English</dd></div><div><dt>Collaboration</dt><dd>Kirolos Emad · Rimon Abdelmasih</dd></div></dl>
+</header>
+
+<section class="cs-sec" aria-labelledby="h-overview"><h2 id="h-overview">Project overview</h2><div><p>Masiter is designed to replace scattered paper records with a connected digital workflow for everyday shop and small-business operations. Product and stock information, sales invoices, customer details, purchase history and receivables are organized within one app.</p><p>The application is built with Flutter and Dart and is available for Android and the web. It supports Arabic and English, including right-to-left layouts for Arabic, as well as light and dark themes.</p><p>This is a collaborative project developed by <strong>Kirolos Emad</strong> and <strong>Rimon Abdelmasih</strong>.</p></div></section>
+
+<section class="cs-sec" aria-labelledby="h-features"><h2 id="h-features">Key features</h2><ul class="caps">
+<li><strong>Products and inventory:</strong> organize products by category and unit, store product images with Supabase Storage, monitor stock and receive low-stock notifications.</li>
+<li><strong>Sales invoices:</strong> create and manage sales invoices, export them as PDF, and prepare print layouts for 58 mm thermal, 80 mm thermal and A4 paper.</li>
+<li><strong>Customers and purchase history:</strong> keep customer details and purchase activity together for easier review.</li>
+<li><strong>Receivables and debt collection:</strong> track customer balances and apply payments to the oldest outstanding invoice first.</li>
+<li><strong>Reminders:</strong> provide low-stock notifications and morning reminders related to outstanding receivables.</li>
+<li><strong>Business data sharing:</strong> share business data with another account through an email-based sharing mechanism.</li>
+<li><strong>Account access:</strong> register and sign in with Firebase Authentication, including email-verification support.</li>
+<li><strong>Localization and themes:</strong> support Arabic and English, RTL layouts, light and dark themes.</li>
+<li><strong>Responsive experience:</strong> adapt the interface for mobile and web, with cached product images and error handling.</li>
+</ul></section>
+
+<section class="cs-sec" aria-labelledby="h-stack"><h2 id="h-stack">Technology stack</h2><dl>
+<div class="stack-block"><dt>Application</dt><dd>Flutter, Dart</dd></div>
+<div class="stack-block"><dt>State management</dt><dd>flutter_bloc (BLoC / Cubit)</dd></div>
+<div class="stack-block"><dt>Navigation</dt><dd>go_router</dd></div>
+<div class="stack-block"><dt>Dependency injection</dt><dd>get_it</dd></div>
+<div class="stack-block"><dt>Responsive UI</dt><dd>flutter_screenutil, responsive_framework</dd></div>
+<div class="stack-block"><dt>Localization</dt><dd>easy_localization</dd></div>
+<div class="stack-block"><dt>Authentication</dt><dd>Firebase Authentication</dd></div>
+<div class="stack-block"><dt>Cloud database</dt><dd>Cloud Firestore</dd></div>
+<div class="stack-block"><dt>Product image storage</dt><dd>Supabase Storage</dd></div>
+<div class="stack-block"><dt>PDF and printing</dt><dd>pdf, printing</dd></div>
+<div class="stack-block"><dt>Image loading</dt><dd>cached_network_image</dd></div>
+<div class="stack-block"><dt>Local and secure storage</dt><dd>shared_preferences, flutter_secure_storage</dd></div>
+<div class="stack-block"><dt>Web hosting</dt><dd>Firebase Hosting</dd></div>
+</dl></section>
+
+<section class="cs-sec" aria-labelledby="h-architecture"><h2 id="h-architecture">Architecture and implementation</h2><div><p>The code separates presentation and data responsibilities: BLoC/Cubit manages application and UI state, while GetIt provides dependency injection. GoRouter organizes navigation between screens, and localization resources support English and Arabic interfaces.</p><p>Firebase Authentication handles account access, Cloud Firestore provides cloud-backed business data, and Supabase Storage is used for product images. PDF generation and printing libraries support exporting and printing invoices in the intended formats.</p><p>The supplied project README identifies the main source areas as the Flutter application under <code>lib/</code>, reusable assets and translations under <code>assets/</code>, screenshot documentation under <code>docs/screenshots/</code>, and Firebase configuration at the project root.</p></div></section>
+
+<section class="cs-sec" aria-labelledby="h-platforms"><h2 id="h-platforms">Platforms and configurations</h2><dl>
+<div class="stack-block"><dt>Platforms</dt><dd>Android and Web</dd></div>
+<div class="stack-block"><dt>Languages</dt><dd>Arabic and English, including RTL support</dd></div>
+<div class="stack-block"><dt>Appearance</dt><dd>Light and dark themes</dd></div>
+<div class="stack-block"><dt>Invoice printing</dt><dd>58 mm thermal, 80 mm thermal and A4</dd></div>
+<div class="stack-block"><dt>Product images</dt><dd>Supabase Storage with cached loading in the client</dd></div>
+</dl></section>
+
+<section class="cs-sec" aria-labelledby="h-contribution"><h2 id="h-contribution">Collaboration and learning</h2><div><p>Masiter is a collaborative project with <strong>Rimon Abdelmasih</strong>. The application brings together several connected business workflows, which makes consistency across products, invoices, customer balances, inventory and shared business data an important part of the overall experience.</p><p>The project also brings together cross-platform UI development, state management with BLoC/Cubit, cloud authentication and data, image storage, localization and invoice document generation. The case study describes the project-level implementation and does not assign individual ownership of each feature where the supplied project materials do not specify it.</p></div></section>
+
+<section class="cs-sec gallery-sec" id="screenshots" aria-labelledby="h-mobile-shots">
+  <div class="gallery-intro"><h2 id="h-mobile-shots">Mobile screenshots</h2><p class="lede">Android screens across key workflows, languages and themes. Select an image to enlarge it; use the arrow keys to move through the gallery.</p></div>
+  <div><ul class="gallery">
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/dashboard_en_light.jpg" data-cap="Masiter mobile dashboard: English, light theme."><img src="docs/screenshots/mobile/dashboard_en_light.jpg" alt="Masiter mobile dashboard in English light theme" width="573" height="1280" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/dashboard_en_dark.jpg" data-cap="Masiter mobile dashboard: English, dark theme."><img src="docs/screenshots/mobile/dashboard_en_dark.jpg" alt="Masiter mobile dashboard in English dark theme" width="573" height="1280" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/dashboard_ar_light.jpg" data-cap="Masiter mobile dashboard: Arabic, light theme, with RTL layout."><img src="docs/screenshots/mobile/dashboard_ar_light.jpg" alt="Masiter mobile dashboard in Arabic light theme with right-to-left layout" width="573" height="1280" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/invoices_en_light.jpg" data-cap="Masiter mobile invoice history: English, light theme."><img src="docs/screenshots/mobile/invoices_en_light.jpg" alt="Masiter mobile invoice history in English light theme" width="573" height="1280" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/invoices_en_dark.jpg" data-cap="Masiter mobile invoice history: English, dark theme."><img src="docs/screenshots/mobile/invoices_en_dark.jpg" alt="Masiter mobile invoice history in English dark theme" width="573" height="1280" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/products_en_light.jpg" data-cap="Masiter mobile product and inventory list: English, light theme."><img src="docs/screenshots/mobile/products_en_light.jpg" alt="Masiter mobile product list in English light theme" width="573" height="1280" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/products_en_dark.jpg" data-cap="Masiter mobile product and inventory list: English, dark theme."><img src="docs/screenshots/mobile/products_en_dark.jpg" alt="Masiter mobile product list in English dark theme" width="573" height="1280" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/clients_en_light.jpg" data-cap="Masiter mobile customers list: English, light theme."><img src="docs/screenshots/mobile/clients_en_light.jpg" alt="Masiter mobile customers list in English light theme" width="573" height="1280" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/clients_en_dark.jpg" data-cap="Masiter mobile customers list: English, dark theme."><img src="docs/screenshots/mobile/clients_en_dark.jpg" alt="Masiter mobile customers list in English dark theme" width="573" height="1280" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/settings_en_light.jpg" data-cap="Masiter mobile settings: English, light theme."><img src="docs/screenshots/mobile/settings_en_light.jpg" alt="Masiter mobile settings in English light theme" width="573" height="1280" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-mobile" type="button" data-full="docs/screenshots/mobile/settings_en_dark.jpg" data-cap="Masiter mobile settings: English, dark theme."><img src="docs/screenshots/mobile/settings_en_dark.jpg" alt="Masiter mobile settings in English dark theme" width="573" height="1280" loading="lazy"></button></li>
+  </ul></div>
+</section>
+
+<section class="cs-sec gallery-sec" aria-labelledby="h-web-shots">
+  <div class="gallery-intro"><h2 id="h-web-shots">Web screenshots</h2><p class="lede">Desktop dashboard and invoice screens across English and Arabic, in light and dark themes.</p></div>
+  <div><ul class="gallery gallery-wide">
+    <li><button class="gallery-item gallery-item-wide" type="button" data-full="docs/screenshots/web/web_dashboard_en_light.png" data-cap="Masiter web dashboard: English, light theme."><img src="docs/screenshots/web/web_dashboard_en_light.png" alt="Masiter web dashboard in English light theme" width="1366" height="728" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-wide" type="button" data-full="docs/screenshots/web/web_dashboard_en_dark.png" data-cap="Masiter web dashboard: English, dark theme."><img src="docs/screenshots/web/web_dashboard_en_dark.png" alt="Masiter web dashboard in English dark theme" width="1366" height="728" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-wide" type="button" data-full="docs/screenshots/web/web_dashboard_ar_light.png" data-cap="Masiter web dashboard: Arabic, light theme."><img src="docs/screenshots/web/web_dashboard_ar_light.png" alt="Masiter web dashboard in Arabic light theme" width="1366" height="728" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-wide" type="button" data-full="docs/screenshots/web/web_dashboard_ar_dark.png" data-cap="Masiter web dashboard: Arabic, dark theme."><img src="docs/screenshots/web/web_dashboard_ar_dark.png" alt="Masiter web dashboard in Arabic dark theme" width="1366" height="728" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-wide" type="button" data-full="docs/screenshots/web/web_invoices_en_light.png" data-cap="Masiter web invoice history: English, light theme."><img src="docs/screenshots/web/web_invoices_en_light.png" alt="Masiter web invoice history in English light theme" width="1366" height="728" loading="lazy"></button></li>
+    <li><button class="gallery-item gallery-item-wide" type="button" data-full="docs/screenshots/web/web_invoices_en_dark.png" data-cap="Masiter web invoice history: English, dark theme."><img src="docs/screenshots/web/web_invoices_en_dark.png" alt="Masiter web invoice history in English dark theme" width="1366" height="728" loading="lazy"></button></li>
+  </ul></div>
+</section>
+
+<section class="cs-end"><div class="actions"><a class="btn" href="index.html#projects">Back to all projects</a><a class="btn" href="project-e-commerce-application.html">Previous project: E-commerce Application</a><a class="btn btn-primary" href="https://masiter.web.app/" target="_blank" rel="noopener noreferrer">Open Masiter web app</a></div></section>
+</main>
+<dialog id="lightbox" class="lightbox" aria-label="Screenshot viewer">
+  <figure class="lb-fig"><img class="lb-img" src="" alt=""><figcaption class="lb-cap"></figcaption></figure>
+  <div class="lb-bar"><button class="btn lb-prev" type="button">Previous</button><span class="mono lb-count" aria-live="polite"></span><button class="btn lb-next" type="button">Next</button><button class="btn lb-close" type="button">Close</button></div>
+</dialog>
+<footer class="foot mono">Kirolos Emad · © <span data-year>2026</span></footer>
+</body>
+</html>

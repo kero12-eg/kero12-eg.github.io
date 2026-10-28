@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meals App — Kirolos Emad</title>
+<meta name="description" content="A Flutter meal application for adding and browsing meals, with onboarding, form validation, meal details, SQLite local storage and SharedPreferences.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Meals App — Kirolos Emad">
+<meta property="og:description" content="A Flutter meal application for adding and browsing meals, with onboarding, form validation, meal details and local storage.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#ECEBE3">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav" id="site-nav"><nav class="nav-inner" aria-label="Sections"><button class="nav-root" type="button" aria-expanded="false" aria-controls="nav-list" data-home="index.html">Kirolos Emad</button><ul class="nav-list" id="nav-list"><li><a href="index.html#home">Home</a></li><li><a href="index.html#projects" aria-current="page">Projects</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav></header>
+<main id="main">
+<header class="cs-top">
+  <nav class="project-breadcrumb mono" aria-label="Breadcrumb"><a href="index.html#projects">Projects</a> / Meals App · 02 of 05</nav>
+  <h1 class="cs-title">Meals App</h1>
+  <p class="cs-sum">A Flutter meal application that lets users add and browse their own meals through a clean mobile interface. Each meal includes a title, image URL, rating, preparation time and description, with meal records saved locally using SQLite.</p>
+  <div class="cs-actions actions"><a class="btn btn-primary" href="index.html#projects">Back to all projects</a><a class="btn" href="https://github.com/kero12-eg?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub repository</a></div>
+  <dl class="facts"><div><dt>Framework</dt><dd>Flutter · Dart</dd></div><div><dt>Data</dt><dd>SQLite local storage</dd></div><div><dt>Onboarding state</dt><dd>SharedPreferences</dd></div><div><dt>Interface</dt><dd>Android mobile UI</dd></div></dl>
+</header>
+<section class="cs-sec" aria-labelledby="h-does"><h2 id="h-does">What it does</h2><ul class="caps"><li>Introductory onboarding carousel with Next and Skip actions.</li><li>Remembers whether onboarding has been seen using SharedPreferences.</li><li>Displays saved meals in a two-column grid.</li><li>Adds a meal with a title, image URL, rating, preparation time and description.</li><li>Validates required fields in the Add Meal form.</li><li>Opens a dedicated details screen for each meal.</li><li>Stores meal records locally using SQLite, so saved meals remain available when the app is reopened.</li><li>Loads meal images from URLs and uses responsive sizing with Flutter ScreenUtil.</li></ul></section>
+<section class="cs-sec" aria-labelledby="h-stack"><h2 id="h-stack">Technology stack</h2><div><dl><div class="stack-block"><dt>Framework</dt><dd>Flutter, Dart</dd></div><div class="stack-block"><dt>Navigation</dt><dd>GoRouter</dd></div><div class="stack-block"><dt>Local storage</dt><dd>SQLite (<code>sqflite</code>), <code>path</code>, <code>shared_preferences</code></dd></div><div class="stack-block"><dt>UI components</dt><dd>Flutter ScreenUtil, carousel_slider, dots_indicator, google_fonts</dd></div><div class="stack-block"><dt>Images</dt><dd>Image URLs; <code>cached_network_image</code> is declared in <code>pubspec.yaml</code></dd></div></dl></div></section>
+<section class="cs-sec" aria-labelledby="h-storage"><h2 id="h-storage">Local data</h2><div><p>The app stores meal details on the device using <code>sqflite</code>. The current implementation uses a local table named `tasks` with fields for the meal title, rating, time, description and image URL. <code>SharedPreferences</code> stores the onboarding-seen state. Remote meal images require an internet connection to load.</p></div></section>
+<section class="cs-sec gallery-sec" aria-labelledby="h-shots"><div class="gallery-intro"><h2 id="h-shots">Screenshots</h2><p class="lede">Screens captured from the Android emulator. Select any image to enlarge it, or use the arrow keys to move through the gallery.</p></div><div><ul class="gallery">
+<li><button class="gallery-item" type="button" data-full="assets/projects/meals-app/OnboardingScreen.jpeg" data-cap="Meals App: onboarding carousel introducing the app."><img src="assets/projects/meals-app/OnboardingScreen.jpeg" alt="Meals App onboarding screen" width="439" height="819" loading="lazy"></button></li>
+<li><button class="gallery-item" type="button" data-full="assets/projects/meals-app/HomeScreen.jpeg" data-cap="Meals App: home screen with saved meals in a two-column grid and an add button."><img src="assets/projects/meals-app/HomeScreen.jpeg" alt="Meals App home screen showing meal cards and add button" width="445" height="827" loading="lazy"></button></li>
+<li><button class="gallery-item" type="button" data-full="assets/projects/meals-app/AddMealScreen.jpeg" data-cap="Meals App: form for entering the meal title, image URL, rating, time and description."><img src="assets/projects/meals-app/AddMealScreen.jpeg" alt="Meals App add meal form" width="443" height="821" loading="lazy"></button></li>
+<li><button class="gallery-item" type="button" data-full="assets/projects/meals-app/MealDetailsScreen.jpeg" data-cap="Meals App: detailed view showing the meal image, preparation time, rating and description."><img src="assets/projects/meals-app/MealDetailsScreen.jpeg" alt="Meals App meal details screen" width="448" height="829" loading="lazy"></button></li>
+</ul></div></section>
+<section class="cs-end"><div class="actions"><a class="btn" href="index.html#projects">Back to all projects</a><a class="btn" href="project-financi.html">Previous project: Financi App</a><a class="btn btn-primary" href="project-news-app.html">Next project: News App</a></div></section>
+</main>
+<dialog id="lightbox" class="lightbox" aria-label="Screenshot viewer">
+  <figure class="lb-fig"><img class="lb-img" src="" alt="" width="448" height="829"><figcaption class="lb-cap"></figcaption></figure>
+  <div class="lb-bar"><button class="btn lb-prev" type="button">Previous</button><span class="mono lb-count" aria-live="polite"></span><button class="btn lb-next" type="button">Next</button><button class="btn lb-close" type="button">Close</button></div>
+</dialog>
+<footer class="foot mono">Kirolos Emad · © <span data-year>2026</span></footer>
+</body>
+</html>

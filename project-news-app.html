@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>News App — Kirolos Emad</title>
+<meta name="description" content="A Flutter news application for exploring headlines, browsing news categories and searching in English and Arabic with REST API integration.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="News App — Kirolos Emad">
+<meta property="og:description" content="Explore headlines, browse news categories and search for articles in English and Arabic with a Flutter app powered by a REST API.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#ECEBE3">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav" id="site-nav"><nav class="nav-inner" aria-label="Sections"><button class="nav-root" type="button" aria-expanded="false" aria-controls="nav-list" data-home="index.html">Kirolos Emad</button><ul class="nav-list" id="nav-list"><li><a href="index.html#home">Home</a></li><li><a href="index.html#projects" aria-current="page">Projects</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav></header>
+<main id="main">
+<header class="cs-top">
+  <nav class="project-breadcrumb mono" aria-label="Breadcrumb"><a href="index.html#projects">Projects</a> / News App · 03 of 05</nav>
+  <h1 class="cs-title">News App</h1>
+  <p class="cs-sum">A Flutter news application that helps users explore the latest headlines, browse news by category, and search for articles in English and Arabic. It retrieves news data through a REST API and presents articles in a clean, responsive mobile interface.</p>
+  <div class="cs-actions actions"><a class="btn btn-primary" href="index.html#projects">Back to all projects</a><a class="btn" href="https://github.com/kero12-eg/news_app" target="_blank" rel="noopener noreferrer">GitHub repository</a></div>
+  <dl class="facts"><div><dt>Framework</dt><dd>Flutter · Dart</dd></div><div><dt>Data</dt><dd>REST API · Dio / HTTP</dd></div><div><dt>Navigation</dt><dd>GoRouter</dd></div><div><dt>Search</dt><dd>English and Arabic</dd></div></dl>
+</header>
+
+<section class="cs-sec" aria-labelledby="h-does"><h2 id="h-does">What it does</h2><ul class="caps">
+<li>Retrieves the latest news headlines from a REST API.</li>
+<li>Lets users browse articles through categories including Technology, Business, Travel and Entertainment.</li>
+<li>Provides a dedicated search screen for finding articles by keyword.</li>
+<li>Displays English and Arabic search results.</li>
+<li>Shows article cards with titles, images, authors and publication dates when that information is available from the API.</li>
+<li>Uses GoRouter to navigate between the home, search and search-results screens.</li>
+<li>Uses Flutter ScreenUtil to support responsive sizing and consistent spacing on mobile screens.</li>
+</ul></section>
+
+<section class="cs-sec" aria-labelledby="h-stack"><h2 id="h-stack">Technology stack</h2><dl>
+<div class="stack-block"><dt>Framework</dt><dd>Flutter, Dart</dd></div>
+<div class="stack-block"><dt>Networking</dt><dd>REST API, Dio / HTTP</dd></div>
+<div class="stack-block"><dt>Navigation</dt><dd>GoRouter</dd></div>
+<div class="stack-block"><dt>Responsive UI</dt><dd>Flutter ScreenUtil</dd></div>
+</dl></section>
+
+<section class="cs-sec" aria-labelledby="h-api"><h2 id="h-api">API integration</h2><div><p>The app fetches news headlines and search results from an external news API. Networking logic is separated into service files, keeping API communication apart from the UI. The API provider, available endpoints and authentication requirements depend on the configuration used by the project.</p><p>When setting up the project locally, configure the API key required by the selected provider and avoid committing private credentials to a public repository.</p></div></section>
+
+<section class="cs-sec" aria-labelledby="h-structure"><h2 id="h-structure">Code organization</h2><div><p>The codebase is organized into shared Core resources and feature-specific directories. The home, search and search-results features contain their own related models, services and widgets where applicable. This structure keeps shared styling and routing separate from screen-specific functionality.</p></div></section>
+
+<section class="cs-sec gallery-sec" aria-labelledby="h-shots">
+  <div class="gallery-intro"><h2 id="h-shots">Screenshots</h2><p class="lede">Screens captured from the app. Select any image to enlarge it, or use the arrow keys to move through the gallery.</p></div>
+  <div><ul class="gallery">
+    <li><button class="gallery-item" type="button" data-full="assets/projects/news-app/HomeScreen.png" data-cap="News App: home screen displaying headlines and news categories."><img src="assets/projects/news-app/HomeScreen.png" alt="News App home screen showing headlines and news categories" width="431" height="914" loading="lazy"></button></li>
+    <li><button class="gallery-item" type="button" data-full="assets/projects/news-app/SearchScreen.png" data-cap="News App: search screen for entering news keywords."><img src="assets/projects/news-app/SearchScreen.png" alt="News App search screen" width="431" height="914" loading="lazy"></button></li>
+    <li><button class="gallery-item" type="button" data-full="assets/projects/news-app/SearchResultScreenEN.png" data-cap="News App: search results displayed in English."><img src="assets/projects/news-app/SearchResultScreenEN.png" alt="News App English search results" width="431" height="914" loading="lazy"></button></li>
+    <li><button class="gallery-item" type="button" data-full="assets/projects/news-app/SearchResultScreenAr.png" data-cap="News App: search results displayed in Arabic."><img src="assets/projects/news-app/SearchResultScreenAr.png" alt="News App Arabic search results" width="431" height="914" loading="lazy"></button></li>
+  </ul></div>
+</section>
+
+<section class="cs-end"><div class="actions"><a class="btn" href="index.html#projects">Back to all projects</a><a class="btn" href="project-meals-app.html">Previous project: Meals App</a><a class="btn btn-primary" href="project-e-commerce-application.html">Next project: E-commerce Application</a></div></section>
+</main>
+
+<dialog id="lightbox" class="lightbox" aria-label="Screenshot viewer">
+  <figure class="lb-fig"><img class="lb-img" src="" alt="" width="431" height="914"><figcaption class="lb-cap"></figcaption></figure>
+  <div class="lb-bar"><button class="btn lb-prev" type="button">Previous</button><span class="mono lb-count" aria-live="polite"></span><button class="btn lb-next" type="button">Next</button><button class="btn lb-close" type="button">Close</button></div>
+</dialog>
+<footer class="foot mono">Kirolos Emad · © <span data-year>2026</span></footer>
+</body>
+</html>
